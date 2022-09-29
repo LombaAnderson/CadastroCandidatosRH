@@ -27,7 +27,7 @@ namespace CadastroCandidatosRH.Models
         public int Id { get; private set; }
 
 
-        [Required(ErrorMessage = "O campo nome completo é obrigatório!")]
+        [Required(ErrorMessage = "O campo cargo é obrigatório!")]
 
         public string Cargo { get; private set; }
 
