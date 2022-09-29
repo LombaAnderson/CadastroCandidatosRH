@@ -1,18 +1,21 @@
 using CadastroCandidatosRH.Data;
 using Microsoft.EntityFrameworkCore;
-using System.Configuration;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
-
-
 // Add services to the container.
+string mySqlConnection =
+       builder.Configuration.GetConnectionString("DefaultConnection");
+
+builder.Services.AddDbContextPool<CadastroContext>(options =>
+          options.UseMySql(mySqlConnection,
+            ServerVersion.AutoDetect(mySqlConnection)));
+         
+
 builder.Services.AddControllersWithViews();
 
-//void ConfigureServices(IServiceCollection services) 
-//{
-//    services.AddDbContext<CadastroContext>(opts => opts.UseMySQL(Configuration.GetConnectionString("CadastroConnection")));
-//}
+
 
 var app = builder.Build();
 
