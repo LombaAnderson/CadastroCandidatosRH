@@ -1,4 +1,6 @@
-﻿@{
+﻿@model CadastroEmpresaModel
+
+@{
     ViewData["Title"] = "Criar Empresa";
 }
 
@@ -11,7 +13,7 @@
 <form asp-controller="CadastroEmpresa" asp-action="CriarEmpresa" method="post">
     <div class="form-group">
         <label for="cargo">Cargo da Vaga</label>
-        <input type="text" class="form-control" placeholder="Digite o cargo da vaga">
+        <input type="text" asp-for="Cargo" class="form-control" placeholder="Digite o cargo da vaga">
         <small id="cargoHelp" class="form-text text-muted"></small>
     </div>
     <div class="form-group">

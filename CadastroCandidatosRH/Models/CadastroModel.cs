@@ -5,10 +5,11 @@ namespace CadastroCandidatosRH.Models
     public class CadastroModel
     {
       
-        public CadastroModel(int id, string nome, string documento, string email, string tecnologias, string competencias)
+        public CadastroModel(int id, string nome, string cargo, string documento, string email, string tecnologias, string competencias)
         {
             Id = id;
             Nome = nome;
+            Cargo = cargo;
             Documento = documento;
             Email = email;
             Tecnologias = tecnologias;
@@ -20,6 +21,9 @@ namespace CadastroCandidatosRH.Models
 
         [Required(ErrorMessage = "O campo nome completo é obrigatório!")]
         public string Nome { get; set; }
+
+        [Required(ErrorMessage = "O campo cargo é obrigatório!")]
+        public string Cargo { get; set; }
 
         [Required(ErrorMessage = "O campo RG é obrigatório!")]
         public string Documento { get;  set; }

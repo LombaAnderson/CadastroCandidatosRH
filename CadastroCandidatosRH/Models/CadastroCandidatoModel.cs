@@ -7,10 +7,11 @@ namespace CadastroCandidatosRH.Models
         public CadastroCandidatoModel(
             int id,
             string nome, 
+            string cargo,
             string documento, 
             string email, 
             string competencias,
-            string tecnologias): base(id,nome,documento,email,competencias,tecnologias)
+            string tecnologias): base(id, cargo,nome,documento,email,competencias,tecnologias)
         {
             Id = id;
             Nome= nome;

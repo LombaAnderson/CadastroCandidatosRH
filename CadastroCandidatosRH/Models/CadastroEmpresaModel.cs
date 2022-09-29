@@ -7,13 +7,15 @@ namespace CadastroCandidatosRH.Models
     {
         public CadastroEmpresaModel(
             int id, 
-            string nome, 
+            string nome,
+            string cargo, 
             string documento,
             string email, 
             string tecnologias,
-            string competencias): base(id,nome,documento,email,tecnologias,competencias)
+            string competencias): base(id,nome,cargo,documento,email,tecnologias,competencias)
         {
             Id = id;
+            Cargo = cargo;
             Nome = nome;
             Email = email;
             Tecnologias = tecnologias;  
@@ -24,8 +26,15 @@ namespace CadastroCandidatosRH.Models
         [Required]
         public int Id { get; private set; }
 
+
         [Required(ErrorMessage = "O campo nome completo é obrigatório!")]
-        public string Nome { get; private set; }
+
+        public string Cargo { get; private set; }
+
+
+        [Required(ErrorMessage = "O campo nome completo é obrigatório!")]
+
+        public string Nome { get; set; }
 
         [Required(ErrorMessage ="O campo email é obrigatório")]
         public string Email { get; private set; }
