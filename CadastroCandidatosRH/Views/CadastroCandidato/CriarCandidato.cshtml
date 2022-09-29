@@ -1,4 +1,6 @@
-﻿@{
+﻿@model CadastroCandidatoModel
+
+@{
     ViewData["Title"] = "Criar Candidato";
 }
 
@@ -8,7 +10,7 @@
 
 </div>
 
-<form>
+<form asp-controller="CadastroCandidato" asp-action="CriarCandidato" method="post">
     <div class="form-group">
         <label for="exampleInputNome">Nome Completo</label>
         <input type="text" class="form-control" placeholder="Digite seu nome completo">

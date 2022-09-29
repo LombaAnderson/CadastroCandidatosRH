@@ -1,17 +1,25 @@
 using CadastroCandidatosRH.Data;
+using CadastroCandidatosRH.Repository;
 using Microsoft.EntityFrameworkCore;
+
 
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-string mySqlConnection =
-       builder.Configuration.GetConnectionString("DefaultConnection");
+//string mySqlConnection =
+//       builder.Configuration.GetConnectionString("DefaultConnection");
 
-builder.Services.AddDbContextPool<CadastroContext>(options =>
-          options.UseMySql(mySqlConnection,
-            ServerVersion.AutoDetect(mySqlConnection)));
-         
+//builder.Services.AddDbContextPool<CadastroContext>(options =>
+//          options.UseMySql(mySqlConnection,
+//            ServerVersion.AutoDetect(mySqlConnection)));
+
+string sqlConnection =
+    builder.Configuration.GetConnectionString("CadastroConnection");
+    builder.Services.AddDbContextPool<CadastroContext>(options =>
+          options.UseSqlServer(sqlConnection));
+builder.Services.AddScoped<ICadastroRepositorio, CadastroRepositorio>();
+
 
 builder.Services.AddControllersWithViews();
 

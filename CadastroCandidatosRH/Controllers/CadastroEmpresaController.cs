@@ -1,9 +1,20 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CadastroCandidatosRH.Models;
+using CadastroCandidatosRH.Repository;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CadastroCandidatosRH.Controllers
 {
+
+ 
+
     public class CadastroEmpresaController : Controller
     {
+        private readonly ICadastroRepositorio _cadastroRepositorio;
+        public CadastroEmpresaController(ICadastroRepositorio cadastroRepositorio)
+        {
+            _cadastroRepositorio = cadastroRepositorio;
+
+        }
         public IActionResult Index()
         {
             return View();
@@ -22,6 +33,13 @@ namespace CadastroCandidatosRH.Controllers
         public IActionResult DeletarEmpresaConfirmacao()
         {
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult CriarEmpresa(CadastroEmpresaModel cadastro)
+        {
+            _cadastroRepositorio.Adicionar(cadastro);
+            return RedirectToAction("Index");
         }
     }
 }

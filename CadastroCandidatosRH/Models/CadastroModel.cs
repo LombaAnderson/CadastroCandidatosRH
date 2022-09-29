@@ -1,28 +1,37 @@
-﻿namespace CadastroCandidatosRH.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace CadastroCandidatosRH.Models
 {
-    public abstract class CadastroModel
+    public class CadastroModel
     {
       
-        protected CadastroModel(int id, string nome, object documento, string email, string tecnologias, string competencias)
+        public CadastroModel(int id, string nome, string documento, string email, string tecnologias, string competencias)
         {
             Id = id;
             Nome = nome;
+            Documento = documento;
             Email = email;
             Tecnologias = tecnologias;
             Competencias = competencias;
         }
+        [Key]
+        [Required]
+        public int Id { get; set; }
 
-        public int Id { get; private set; }
+        [Required(ErrorMessage = "O campo nome completo é obrigatório!")]
+        public string Nome { get; set; }
 
-        public string Nome { get; private set; }        
+        [Required(ErrorMessage = "O campo RG é obrigatório!")]
+        public string Documento { get;  set; }
 
-        public int Documento { get;  private set; }
+        [Required(ErrorMessage = "O campo email é obrigatório!")]
+        public string Email{ get;  set; }
 
-        public string Email{ get;  private set; }
-
+        [Required(ErrorMessage = "O campo competências é obrigatório!")]
         public string Competencias { get; set; }
 
-        public string Tecnologias { get; private set; }
+        [Required(ErrorMessage = "O campo tecnologias é obrigatório!")]
+        public string Tecnologias { get; set; }
 
        
     }
