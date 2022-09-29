@@ -1,0 +1,71 @@
+﻿@{
+    ViewData["Title"] = "Lista de Candidatos";
+}
+
+<div class="text-center">
+
+    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <a class="btn btn-primary" role"button" asp-controller="CadastroCandidato" asp-action="CriarCandidato"> Novo Candidato</a>
+
+    </div>
+
+
+    <h1 class="display-4">Lista de Candidatos </h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nome Completo</th>
+                <th scope="col">RG</th>
+                <th scope="col">Email</th>
+                <th scope="col">Competências</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Anderson Lomba</td>
+                <td>0789324812</td>
+                <td>lomba@gmail.com</td>
+                <td>Python, Javascript e AspNet Core</td>
+                <td>
+
+                    <div class="btn-group" role="group">
+                        <a role="button" class="btn btn-primary" asp-controller="CadastroCandidato" asp-action="EditarCandidato">Editar</a>
+                        <a role="button" class="btn btn-danger" asp-controller="CadastroCandidato" asp-action="DeletarCandidatoConfirmacao">Deletar</a>
+
+                </td>
+
+            </tr>
+        <th scope="row">2</th>
+        <td>Juliano Santiago</td>
+        <td>0789543212</td>
+        <td>santiago12@hotmail.com</td>
+        <td>C Sharp, Nodejs e AspNet Core</td>
+        <td>
+            <div class="btn-group" role="group">
+                <a role="button" class="btn btn-primary" asp-controller="CadastroCandidato" asp-action="EditarCandidato">Editar</a>
+                <a role="button" class="btn btn-danger" asp-controller="CadastroCandidato" asp-action="DeletarCandidatoConfirmacao">Deletar</a>
+        </td>
+        <tr>
+            <th scope="row">3</th>
+            <td>Fernanda Tobias</td>
+            <td>9877654312</td>
+            <td>tobias77@gmail.com</td>
+            <td>Dephi, Javascript e Python</td>
+            <td>
+                <div class="btn-group" role="group">
+                    <a role="button" class="btn btn-primary" asp-controller="CadastroCandidato" asp-action="EditarCandidato">Editar</a>
+                    <a role="button" class="btn btn-danger" asp-controller="CadastroCandidato" asp-action="DeletarCandidatoConfirmacao">Deletar</a>
+            </td>
+
+        </tr>
+
+        </tbody>
+    </table>
+
+</div>
+
+

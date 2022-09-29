@@ -1,0 +1,71 @@
+﻿@{
+    ViewData["Title"] = "Lista de Empresas";
+}
+
+<div class="text-center">
+
+    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <a class="btn btn-primary" role="button" asp-controller="CadastroEmpresa" asp-action="CriarEmpresa">Cadastrar nova empresa</a>
+
+    </div>
+
+    <h1 class="display-4">Lista de Empresas</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Cargo da vaga</th>
+                <th scope="col">Nome da Empresa</th>
+                <th scope="col">Email da Empresa</th>
+                <th scope="col">Tecnologias requeridas</th>
+                <th scope="col">Vagas Disponíveis</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Desenvolvedor Full Stack</td>
+                <td>Lomba Corporation</td>
+                <td>lombacorporation@gmail.com</td>
+                <td>C Sharp e AspNet Core</td>
+                <td>C Sharp, Javascript e AspNet Core</td>
+                <td>
+                    <div class="btn-group" role="group">
+                        <a role="button" class="btn btn-primary" asp-controller="CadastroEmpresa" asp-action="EditarEmpresa">Editar</a>
+                        <a role="button" class="btn btn-danger" asp-controller="CadastroCandidato" asp-action="DeletarCandidatoConfirmacao">Deletar</a>
+                </td>
+
+            </tr>
+        <th scope="row">2</th>
+        <td>Desenvolvedor Backend</td>
+        <td>Wedesh Corporation</td>
+        <td>wedeshcorporation@hotmail.com</td>
+        <td>C Sharp e AspNet Core</td>
+        <td>C Sharp, Javascript e AspNet Core</td>
+        <td>
+            <div class="btn-group" role="group">
+                <a role="button" class="btn btn-primary" asp-controller="CadastroEmpresa" asp-action="EditarEmpresa">Editar</a>
+                <a role="button" class="btn btn-danger" asp-controller="CadastroCandidato" asp-action="DeletarCandidatoConfirmacao">Deletar</a>
+        </td>
+        <tr>
+            <th scope="row">3</th>
+            <td>Desenvolvedor Front-End</td>
+            <td>Wedesh Corporation</td>
+            <td>wedeshcorporation@hotmail.com</td>
+            <td>C Sharp e AspNet Core</td>
+            <td>C Sharp, Javascript e AspNet Core</td>
+            <td>
+                <div class="btn-group" role="group">
+                    <a role="button" class="btn btn-primary" asp-controller="CadastroEmpresa" asp-action="EditarEmpresa">Editar</a>
+                    <a role="button" class="btn btn-danger" asp-controller="CadastroCandidato" asp-action="DeletarCandidatoConfirmacao">Deletar</a>
+            </td>
+
+        </tr>
+
+        </tbody>
+    </table>
+
+</div>
+
+
