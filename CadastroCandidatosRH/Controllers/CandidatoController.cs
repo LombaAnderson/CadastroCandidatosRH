@@ -4,10 +4,10 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CadastroCandidatosRH.Controllers
 {
-    public class CadastroCandidatoController : Controller
+    public class CandidatoController : Controller
     {
         private readonly ICadastroRepositorio _cadastroRepositorio;
-        public CadastroCandidatoController(ICadastroRepositorio cadastroRepositorio)
+        public CandidatoController(ICadastroRepositorio cadastroRepositorio)
         {
             _cadastroRepositorio = cadastroRepositorio;
 
@@ -33,7 +33,7 @@ namespace CadastroCandidatosRH.Controllers
         }
 
         [HttpPost]
-        public IActionResult CriarCandidato(CadastroCandidatoModel cadastro)
+        public IActionResult CriarCandidato(Candidato cadastro)
         {
             _cadastroRepositorio.Adicionar(cadastro);
             return RedirectToAction("Index");

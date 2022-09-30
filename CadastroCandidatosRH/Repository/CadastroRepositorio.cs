@@ -13,7 +13,7 @@ namespace CadastroCandidatosRH.Repository
 
         }
 
-        public CadastroCandidatoModel Adicionar(CadastroCandidatoModel cadastro)
+        public Candidato Adicionar(Candidato cadastro)
         {
             // Gravar no banco de dados
 
@@ -22,7 +22,7 @@ namespace CadastroCandidatosRH.Repository
             return cadastro;
         }
 
-        public void Adicionar(CadastroEmpresaModel cadastro)
+        public void Adicionar(Empresa cadastro)
         {
 
         }

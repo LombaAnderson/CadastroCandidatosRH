@@ -2,23 +2,9 @@
 
 namespace CadastroCandidatosRH.Models
 {
-    public class CadastroEmpresaModel
+    public class Empresa
 
-    {
-        public CadastroEmpresaModel(
-            int id, 
-            string nome,          
-            string email, 
-            string tecnologias
-            )
-        {
-            Id = id;        
-            Nome = nome;
-            Email = email;
-            Tecnologias = tecnologias;  
-        }
-
-
+    {     
         [Key]
         [Required]
         public int Id { get; private set; }
