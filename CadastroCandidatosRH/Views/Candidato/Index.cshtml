@@ -5,14 +5,14 @@
 <div class="text-center">
 
     <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-        <a class="btn btn-primary" role"button" asp-controller="CadastroCandidato" asp-action="CriarCandidato"> Novo Candidato</a>
+        <a class="btn btn-primary" role"button" asp-controller="Candidato" asp-action="CriarCandidato"> Novo Candidato</a>
 
     </div>
 
 
     <h1 class="display-4">Lista de Candidatos </h1>
 
-    <table class="table">
+    <table id="tableCandidato" class="table">
         <thead>
             <tr>
                 <th scope="col">#</th>
@@ -33,8 +33,8 @@
                 <td>
 
                     <div class="btn-group" role="group">
-                        <a role="button" class="btn btn-primary" asp-controller="CadastroCandidato" asp-action="EditarCandidato">Editar</a>
-                        <a role="button" class="btn btn-danger" asp-controller="CadastroCandidato" asp-action="DeletarCandidatoConfirmacao">Deletar</a>
+                        <a role="button" class="btn btn-primary" asp-controller="Candidato" asp-action="EditarCandidato">Editar</a>
+                        <a role="button" class="btn btn-danger" asp-controller="Candidato" asp-action="DeletarCandidatoConfirmacao">Deletar</a>
 
                 </td>
 
@@ -46,8 +46,8 @@
         <td>C Sharp, Nodejs e AspNet Core</td>
         <td>
             <div class="btn-group" role="group">
-                <a role="button" class="btn btn-primary" asp-controller="CadastroCandidato" asp-action="EditarCandidato">Editar</a>
-                <a role="button" class="btn btn-danger" asp-controller="CadastroCandidato" asp-action="DeletarCandidatoConfirmacao">Deletar</a>
+                <a role="button" class="btn btn-primary" asp-controller="Candidato" asp-action="EditarCandidato">Editar</a>
+                <a role="button" class="btn btn-danger" asp-controller="Candidato" asp-action="DeletarCandidatoConfirmacao">Deletar</a>
         </td>
         <tr>
             <th scope="row">3</th>
@@ -57,8 +57,8 @@
             <td>Dephi, Javascript e Python</td>
             <td>
                 <div class="btn-group" role="group">
-                    <a role="button" class="btn btn-primary" asp-controller="CadastroCandidato" asp-action="EditarCandidato">Editar</a>
-                    <a role="button" class="btn btn-danger" asp-controller="CadastroCandidato" asp-action="DeletarCandidatoConfirmacao">Deletar</a>
+                    <a role="button" class="btn btn-primary" asp-controller="Candidato" asp-action="EditarCandidato">Editar</a>
+                    <a role="button" class="btn btn-danger" asp-controller="Candidato" asp-action="DeletarCandidatoConfirmacao">Deletar</a>
             </td>
 
         </tr>
@@ -66,6 +66,19 @@
         </tbody>
     </table>
 
+
 </div>
+
+
+@section Scripts {
+
+    <script>
+        $(document).ready(function () {
+            $('#tableCandidato').DataTable();
+        });
+    </script>
+    }
+
+
 
 
