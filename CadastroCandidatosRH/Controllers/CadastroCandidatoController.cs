@@ -33,7 +33,7 @@ namespace CadastroCandidatosRH.Controllers
         }
 
         [HttpPost]
-        public IActionResult CriarCandidato(CadastroCandidatoModel cadastro) 
+        public IActionResult CriarCandidato(CadastroCandidatoModel cadastro)
         {
             _cadastroRepositorio.Adicionar(cadastro);
             return RedirectToAction("Index");

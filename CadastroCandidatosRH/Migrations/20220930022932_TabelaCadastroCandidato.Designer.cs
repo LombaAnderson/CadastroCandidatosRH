@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CadastroCandidatosRH.Migrations
 {
     [DbContext(typeof(CadastroContext))]
-    [Migration("20220929205307_TabelaDeCadastro")]
-    partial class TabelaDeCadastro
+    [Migration("20220930022932_TabelaCadastroCandidato")]
+    partial class TabelaCadastroCandidato
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,7 +23,7 @@ namespace CadastroCandidatosRH.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("CadastroCandidatosRH.Models.CadastroModel", b =>
+            modelBuilder.Entity("CadastroCandidatosRH.Models.CadastroCandidatoModel", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -47,13 +47,9 @@ namespace CadastroCandidatosRH.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Tecnologias")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("Id");
 
-                    b.ToTable("Cadastros");
+                    b.ToTable("Cadastro_Candidatos");
                 });
 #pragma warning restore 612, 618
         }

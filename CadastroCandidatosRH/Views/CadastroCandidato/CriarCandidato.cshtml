@@ -13,24 +13,25 @@
 <form asp-controller="CadastroCandidato" asp-action="CriarCandidato" method="post">
     <div class="form-group">
         <label for="exampleInputNome">Nome Completo</label>
-        <input type="text" class="form-control" placeholder="Digite seu nome completo">
+        <input type="text" asp-for="Nome" class="form-control" placeholder="Digite seu nome completo">
         <small id="nomeHelp" class="form-text text-muted"></small>
     </div>
     <div class="form-group">
         <label for="exampleInputRG">RG</label>
-        <input type="text" class="form-control" placeholder="Digite seu RG">
+        <input type="text" asp-for="Documento" class="form-control" placeholder="Digite seu RG">
         <small id="rgHelp" class="form-text text-muted"></small>
     </div>
     <div class="form-group">
         <label for="exampleInputEmail">Email</label>
-        <input type="text" class="form-control" placeholder="Preencha email">
+        <input type="text" asp-for="Email" class="form-control" placeholder="Preencha email">
         <small id="nomeHelp" class="form-text text-muted"></small>
     </div>
     <div class="form-group">
         <label for="exampleInputCompetencias">Competências</label>
-        <input type="text" class="form-control" placeholder="Preencha suas competências">
+        <input type="text" asp-for="Competencias" class="form-control" placeholder="Preencha suas competências">
         <small id="competenciasHelp" class="form-text text-muted"></small>
     </div>
+    
     <br>
     <button type="submit" class="btn btn-primary">Adicionar</button>
 

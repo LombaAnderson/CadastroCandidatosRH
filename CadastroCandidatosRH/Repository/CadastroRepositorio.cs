@@ -6,20 +6,25 @@ namespace CadastroCandidatosRH.Repository
 
     public class CadastroRepositorio : ICadastroRepositorio
     {
-        private readonly CadastroContext _cadastroContext;   
+        private readonly CadastroContext _cadastroContext;
         public CadastroRepositorio(CadastroContext cadastroContext)
         {
-            _cadastroContext= cadastroContext;  
-                
+            _cadastroContext = cadastroContext;
+
         }
 
-        public CadastroModel Adicionar(CadastroModel cadastro)
+        public CadastroCandidatoModel Adicionar(CadastroCandidatoModel cadastro)
         {
             // Gravar no banco de dados
 
             _cadastroContext.Cadastros.Add(cadastro);
             _cadastroContext.SaveChanges();
             return cadastro;
+        }
+
+        public void Adicionar(CadastroEmpresaModel cadastro)
+        {
+
         }
     }
 }

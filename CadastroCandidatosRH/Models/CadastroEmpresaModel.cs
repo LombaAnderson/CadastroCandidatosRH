@@ -2,20 +2,17 @@
 
 namespace CadastroCandidatosRH.Models
 {
-    public class CadastroEmpresaModel:CadastroModel
+    public class CadastroEmpresaModel
 
     {
         public CadastroEmpresaModel(
             int id, 
-            string nome,
-            string cargo, 
-            string documento,
+            string nome,          
             string email, 
-            string tecnologias,
-            string competencias): base(id,nome,cargo,documento,email,tecnologias,competencias)
+            string tecnologias
+            )
         {
-            Id = id;
-            Cargo = cargo;
+            Id = id;        
             Nome = nome;
             Email = email;
             Tecnologias = tecnologias;  
@@ -27,11 +24,6 @@ namespace CadastroCandidatosRH.Models
         public int Id { get; private set; }
 
 
-        [Required(ErrorMessage = "O campo cargo é obrigatório!")]
-
-        public string Cargo { get; private set; }
-
-
         [Required(ErrorMessage = "O campo nome completo é obrigatório!")]
 
         public string Nome { get; set; }
@@ -41,5 +33,8 @@ namespace CadastroCandidatosRH.Models
 
         [Required(ErrorMessage ="O campo tecnologias é obrigatório")]
         public string Tecnologias { get; private set; }
+
+        [Required(ErrorMessage = "O campo vagas disponíveis é obrigatório!")]
+        public string VagasDisponiveis { get; set; }
     }
 }

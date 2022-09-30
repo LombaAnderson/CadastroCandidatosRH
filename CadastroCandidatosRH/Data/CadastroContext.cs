@@ -10,6 +10,6 @@ namespace CadastroCandidatosRH.Data
                 
         }
 
-        public DbSet<CadastroModel> Cadastros { get; set; }
+        public DbSet<CadastroCandidatoModel> Cadastros { get; set; }
     }
 }

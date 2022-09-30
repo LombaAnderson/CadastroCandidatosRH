@@ -4,6 +4,7 @@ namespace CadastroCandidatosRH.Repository
 {
     public interface ICadastroRepositorio
     {
-        CadastroModel Adicionar(CadastroModel cadastro);
+        CadastroCandidatoModel Adicionar(CadastroCandidatoModel cadastro);
+        void Adicionar(CadastroEmpresaModel cadastro);
     }
 }

@@ -21,7 +21,7 @@ namespace CadastroCandidatosRH.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("CadastroCandidatosRH.Models.CadastroModel", b =>
+            modelBuilder.Entity("CadastroCandidatosRH.Models.CadastroCandidatoModel", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -45,13 +45,9 @@ namespace CadastroCandidatosRH.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Tecnologias")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("Id");
 
-                    b.ToTable("Cadastros");
+                    b.ToTable("Cadastro_Candidatos");
                 });
 #pragma warning restore 612, 618
         }

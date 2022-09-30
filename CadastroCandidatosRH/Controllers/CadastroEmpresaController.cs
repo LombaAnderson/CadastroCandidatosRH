@@ -5,8 +5,6 @@ using Microsoft.AspNetCore.Mvc;
 namespace CadastroCandidatosRH.Controllers
 {
 
- 
-
     public class CadastroEmpresaController : Controller
     {
         private readonly ICadastroRepositorio _cadastroRepositorio;
@@ -36,9 +34,9 @@ namespace CadastroCandidatosRH.Controllers
         }
 
         [HttpPost]
-        public IActionResult CriarEmpresa(CadastroEmpresaModel cadastro)
+        public IActionResult CriarEmpresa(CadastroEmpresaModel cadastroCandidato)
         {
-            _cadastroRepositorio.Adicionar(cadastro);
+            _cadastroRepositorio.Adicionar(cadastroCandidato);
             return RedirectToAction("Index");
         }
     }

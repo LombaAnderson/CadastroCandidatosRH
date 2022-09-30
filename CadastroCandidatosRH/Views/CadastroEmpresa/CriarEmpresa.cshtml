@@ -13,27 +13,27 @@
 <form asp-controller="CadastroEmpresa" asp-action="CriarEmpresa" method="post">
     <div class="form-group">
         <label for="cargo">Cargo da Vaga</label>
-        <input type="text" asp-for="Cargo" class="form-control" placeholder="Digite o cargo da vaga">
+        <input type="text" asp-for="Nome" class="form-control" placeholder="Digite o cargo da vaga">
         <small id="cargoHelp" class="form-text text-muted"></small>
     </div>
     <div class="form-group">
         <label for="nome">Nome da Empresa</label>
-        <input type="text" class="form-control" placeholder="Digite o nome da empresa">
+        <input type="text" asp-for="Nome" class="form-control" placeholder="Digite o nome da empresa">
         <small id="nomeHelp" class="form-text text-muted"></small>
     </div>
     <div class="form-group">
         <label for="exampleInputEmail">Email</label>
-        <input type="text" class="form-control" placeholder="Digite email">
+        <input type="text" asp-for="Email" class="form-control" placeholder="Digite email">
         <small id="nomeHelp" class="form-text text-muted"></small>
     </div>
     <div class="form-group">
         <label for="exampleInputCompetencias">Tecnologias Requeridas</label>
-        <input type="text" class="form-control" placeholder="Preencha as tecnologias requeridas">
+        <input type="text" asp-for="Tecnologias" class="form-control" placeholder="Preencha as tecnologias requeridas">
         <small id="tecnologiasHelp" class="form-text text-muted"></small>
     </div>
     <div class="form-group">
         <label for="exampleInputVagas">Vagas Disponíveis</label>
-        <input type="text" class="form-control" placeholder="Digite as vagas disponíveis">
+        <input type="text" asp-for="VagasDisponiveis" class="form-control" placeholder="Digite as vagas disponíveis">
         <small id="vagasHelp" class="form-text text-muted"></small>
     </div>
     <br>

@@ -4,12 +4,12 @@
 
 namespace CadastroCandidatosRH.Migrations
 {
-    public partial class TabelaDeCadastro : Migration
+    public partial class TabelaCadastroCandidato : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Cadastros",
+                name: "Cadastro_Candidatos",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -17,19 +17,18 @@ namespace CadastroCandidatosRH.Migrations
                     Nome = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Documento = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Competencias = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Tecnologias = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Competencias = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Cadastros", x => x.Id);
+                    table.PrimaryKey("PK_Cadastro_Candidatos", x => x.Id);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Cadastros");
+                name: "Cadastro_Candidatos");
         }
     }
 }
