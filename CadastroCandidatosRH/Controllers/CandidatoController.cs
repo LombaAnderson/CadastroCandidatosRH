@@ -1,17 +1,17 @@
 ﻿using CadastroCandidatosRH.Models;
-using CadastroCandidatosRH.Repository;
+//using CadastroCandidatosRH.Repository;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CadastroCandidatosRH.Controllers
 {
     public class CandidatoController : Controller
     {
-        private readonly ICadastroRepositorio _cadastroRepositorio;
-        public CandidatoController(ICadastroRepositorio cadastroRepositorio)
-        {
-            _cadastroRepositorio = cadastroRepositorio;
+        //private readonly ICadastroCandidatoRepositorio _cadastroRepositorio;
+        //public CandidatoController(ICadastroCandidatoRepositorio cadastroRepositorio)
+        //{
+        //    _cadastroRepositorio = cadastroRepositorio;
 
-        }
+        //}
         public IActionResult Index()
         {
             return View();
@@ -32,11 +32,11 @@ namespace CadastroCandidatosRH.Controllers
             return View();
         }
 
-        [HttpPost]
-        public IActionResult CriarCandidato(Candidato cadastro)
-        {
-            _cadastroRepositorio.Adicionar(cadastro);
-            return RedirectToAction("Index");
-        }
+        //[HttpPost]
+        //public IActionResult CriarCandidato(Candidato cadastro)
+        //{
+        //    _cadastroRepositorio.Adicionar(cadastro);
+        //    return RedirectToAction("Index");
+        //}
     }
 }

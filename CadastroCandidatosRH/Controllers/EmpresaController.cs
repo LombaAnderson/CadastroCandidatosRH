@@ -1,5 +1,5 @@
 ﻿using CadastroCandidatosRH.Models;
-using CadastroCandidatosRH.Repository;
+//using CadastroCandidatosRH.Repository;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CadastroCandidatosRH.Controllers
@@ -7,12 +7,12 @@ namespace CadastroCandidatosRH.Controllers
 
     public class EmpresaController : Controller
     {
-        private readonly ICadastroRepositorio _cadastroRepositorio;
-        public EmpresaController(ICadastroRepositorio cadastroRepositorio)
-        {
-            _cadastroRepositorio = cadastroRepositorio;
+        //private readonly ICadastroCandidatoRepositorio _cadastroRepositorio;
+        //public EmpresaController(ICadastroCandidatoRepositorio cadastroRepositorio)
+        //{
+        //    _cadastroRepositorio = cadastroRepositorio;
 
-        }
+        //}
         public IActionResult Index()
         {
             return View();
@@ -33,11 +33,11 @@ namespace CadastroCandidatosRH.Controllers
             return View();
         }
 
-        [HttpPost]
-        public IActionResult CriarEmpresa(Empresa cadastroCandidato)
-        {
-            _cadastroRepositorio.Adicionar(cadastroCandidato);
-            return RedirectToAction("Index");
-        }
+        //[HttpPost]
+        //public IActionResult CriarEmpresa(Empresa empresas)
+        //{
+        //    _cadastroRepositorio.Adicionar(empresas);
+        //    return RedirectToAction("Index");
+        //}
     }
 }

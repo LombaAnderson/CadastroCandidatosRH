@@ -11,5 +11,7 @@ namespace CadastroCandidatosRH.Data
         }
 
         public DbSet<Candidato> Cadastros { get; set; }
+
+        public DbSet<Empresa> Empresas { get; set; }
     }
 }

@@ -1,5 +1,5 @@
 using CadastroCandidatosRH.Data;
-using CadastroCandidatosRH.Repository;
+//using CadastroCandidatosRH.Repository;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -12,7 +12,8 @@ string sqlConnection =
     builder.Configuration.GetConnectionString("CadastroConnection");
     builder.Services.AddDbContextPool<CadastroContext>(options =>
           options.UseSqlServer(sqlConnection));
-builder.Services.AddScoped<ICadastroRepositorio, CadastroRepositorio>();
+//builder.Services.AddScoped<ICadastroCandidatoRepositorio, CadastroCandidatoRepositorio>();
+//builder.Services.AddScoped<ICadastroEmpresaRepositorio, CadastroEmpresaRepositorio>();
 
 
 builder.Services.AddControllersWithViews();

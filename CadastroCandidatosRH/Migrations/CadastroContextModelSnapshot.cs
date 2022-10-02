@@ -47,7 +47,7 @@ namespace CadastroCandidatosRH.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Cadastro_Candidatos");
+                    b.ToTable("Cadastro_Candidatos", (string)null);
                 });
 #pragma warning restore 612, 618
         }
