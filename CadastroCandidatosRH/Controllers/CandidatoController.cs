@@ -1,8 +1,5 @@
-﻿using AutoMapper;
-using CadastroCandidatosRH.Data;
-using CadastroCandidatosRH.Data.Dtos;
-using CadastroCandidatosRH.Models;
-//using CadastroCandidatosRH.Repository;
+﻿using CadastroCandidatosRH.Models;
+using CadastroCandidatosRH.Repository;
 using Microsoft.AspNetCore.Mvc;
 
 
@@ -10,25 +7,23 @@ namespace CadastroCandidatosRH.Controllers
 {
     public class CandidatoController : Controller
     {
-        //private readonly ICadastroCandidatoRepositorio _cadastroRepositorio;
-        //public CandidatoController(ICadastroCandidatoRepositorio cadastroRepositorio)
-        //{
-        //    _cadastroRepositorio = cadastroRepositorio;
-
-        //}
-
-        private CadastroContext _context;
-        private IMapper _mapper; 
-        public IActionResult Index(CadastroContext context, IMapper mapper)
+        private readonly ICandidatoRepositorio _cadastroRepositorio;
+        public CandidatoController(ICandidatoRepositorio cadastroRepositorio)
         {
-            _context = context;
-            _mapper = mapper;
+            _cadastroRepositorio = cadastroRepositorio;
+
+        }
+
+
+        public IActionResult Index()
+        {
+           
             return View();
         }
 
-        public IActionResult CriarCandidato(CreateCandidatoDto CandidatoDto)
+        public IActionResult CriarCandidato()
         {
-            Candidato candidato = _mapper.Map<Candidato>(CandidatoDto);
+        
             return View();
         }
 
@@ -44,11 +39,11 @@ namespace CadastroCandidatosRH.Controllers
             return View();
         }
 
-        //[HttpPost]
-        //public IActionResult CriarCandidato(Candidato cadastro)
-        //{
-        //    _cadastroRepositorio.Adicionar(cadastro);
-        //    return RedirectToAction("Index");
-        //}
+        [HttpPost]
+        public IActionResult CriarCandidato(Candidato cadastro)
+        {
+            _cadastroRepositorio.Adicionar(cadastro);
+            return RedirectToAction("Index");
+        }
     }
 }
